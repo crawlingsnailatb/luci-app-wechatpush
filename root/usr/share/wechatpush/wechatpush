@@ -278,7 +278,7 @@ main() {
 		[ ! -f "${dir}/send_enable.lock" ] && down_send
 
 		# 当前设备列表
-		[ -n "$content" ] && [ ! -f "${dir}/send_enable.lock" ] && current_device
+		[ -z "$content" ] && [ ! -f "${dir}/send_enable.lock" ] && current_device
 
 		# 无人值守任务
 		[ ! -f "${dir}/send_enable.lock" ] && unattended
